@@ -6,7 +6,7 @@ describe('Fitterfly Diabetes Reversal Test', () => {
   
     cy.visit("https://www.fitterfly.com/reversal-calculator")
     cy.wait(2000)
-    cy.get("#txtName").scrollIntoView().type('Test') // Input Name
+    cy.get("#txtName").scrollIntoView().type('Test') // Input Name ///////////
     cy.get("#numMobileNo").scrollIntoView().type(9428632838)  // Input Number
     cy.get("#city").type('Sur')
     cy.xpath("//li[contains(text(),'Surendranagar')]").click().wait(2000)
