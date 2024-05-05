@@ -6,7 +6,7 @@ describe('Fitterfly Diabetes Reversal Test', () => {
   
 
     //Main Page 
-    cy.visit("https://www.fitterfly.com/prediabetes-risk-test")
+    cy.visit("https://www.fitterfly.com/prediabetes-risk-test") /// input
     cy.get("div[class='banner-info'] a[class='btn calc-btn']").should('have.text','Check Now ').click()
     cy.get("body > section:nth-child(5) > div:nth-child(1) > div:nth-child(2) > form:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > span:nth-child(1)").click()
     
