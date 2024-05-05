@@ -4,7 +4,7 @@ describe('On Testing', () => {
 
 
     it('Chips Selection Functionality', ()=>{
-       cy.visit("https://www.fitterfly.com/blog/diabetes-management/")
+       cy.visit("https://www.fitterfly.com/blog/diabetes-management/") ///////
        cy.wait(2000)
        cy.get(".cat-item.cat-item-402").click()
        cy.url().should('contain','diabetes-sleep-and-stress')
