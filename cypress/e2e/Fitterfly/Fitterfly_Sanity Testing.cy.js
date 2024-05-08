@@ -55,6 +55,16 @@ describe('Fitterfly All Pages', () => {
 
 })
 
+it.only('Verify Our Programs > Fitterfly Fit Heart Page ', () => {
+  cy.visit("https://www.fitterfly.com/heart-health-program")
+
+  cy.xpath("//h2[normalize-space()='Who is the FitHeart Program for?']").should('have.text','Who is the FitHeart Program for?')
+  cy.xpath("//h2[normalize-space()='How to enroll in the FitHeart Program']").should('have.text','How to enroll in the FitHeart Program')
+  cy.xpath("//h2[normalize-space()='Clinically Proven Outcomes of FitHeart Program']").should('have.text','Clinically Proven Outcomes of FitHeart Program')
+
+
+})
+  
 // BLOG 
   
 it('Verify Blog > Blog Home Page ', () => {
