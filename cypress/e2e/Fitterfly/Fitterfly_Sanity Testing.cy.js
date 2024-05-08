@@ -55,7 +55,7 @@ describe('Fitterfly All Pages', () => {
 
 })
 
-it.only('Verify Our Programs > Fitterfly Fit Heart Page ', () => {
+it('Verify Our Programs > Fitterfly Fit Heart Page ', () => {
   cy.visit("https://www.fitterfly.com/heart-health-program")
 
   cy.xpath("//h2[normalize-space()='Who is the FitHeart Program for?']").should('have.text','Who is the FitHeart Program for?')
