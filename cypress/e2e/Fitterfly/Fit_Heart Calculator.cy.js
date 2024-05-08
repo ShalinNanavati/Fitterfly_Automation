@@ -144,7 +144,7 @@ describe('Fitterfly Fit-Heart Calculator', () => {
    cy.xpath("//input[contains(@ng-model,'person.systolic')]").type(125)  //Systolic Value
    cy.xpath("//input[contains(@ng-model,'person.diastolic')]").type(82) //Diastolic value
    cy.xpath("//span[normalize-space()='Finish']").click() //Finish button
-   cy.wait(2000)
+   cy.wait(4000)
 
    // Final Result Page
 
