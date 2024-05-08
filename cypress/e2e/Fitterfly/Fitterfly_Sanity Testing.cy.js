@@ -406,7 +406,8 @@ it('Verify Youtube Platform Page ', () => {
 cy.visit("https://www.youtube.com/channel/UCqcXfVQHWrKUNdZkhSTVwwQ")
 cy.wait(2000)
 
-cy.xpath("//div[@id='inner-header-container']//yt-formatted-string[@id='text']").should('have.text','Fitterfly Wellness & DTx')
+//cy.xpath("//div[@id='inner-header-container']//yt-formatted-string[@id='text']").should('have.text','Fitterfly Wellness & DTx')
+cy.xpath("//span[normalize-space()='Fitterfly Wellness & DTx']").should('have.text','Fitterfly Wellness & DTx')
 
 })
 
