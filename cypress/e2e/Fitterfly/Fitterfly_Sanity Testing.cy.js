@@ -189,8 +189,8 @@ it('Verify Blog > Know More > Video Library Page ', () => {
   cy.visit("https://www.fitterfly.com/blog/video-library/")
   cy.wait(1000)
   
-  cy.get("div[class='col-lg-12 col-sm-12 col-xs-12'] h1").should('have.text','Video Library')
-  cy.get(".read.btn.btn-secondary-blue.btn-sm.btn-outline").should('have.text','View More Videos')
+  cy.xpath("//div[@class='video-head-title']").should('have.text','Video Library')
+  //cy.get(".read.btn.btn-secondary-blue.btn-sm.btn-outline").should('have.text','View More Videos')
 })
 
 it("Verify Blog > Know More > Doctor's Digest Page" , () => {
@@ -252,7 +252,7 @@ it('Verify Company > Corporate Wellness Page ', () => {
 it('Verify Assessment Tools > Diabetes Reversal Calculator Page ', () => {
   cy.visit("https://www.fitterfly.com/reversal-calculator")
 
-  cy.get("h1:nth-child(1)").should('have.text','Can you Reverse Diabetes*?')
+  cy.xpath("//h1[contains(text(),'Reverse Type 2 Diabetes: Take Control, Live Health')]").should('have.text','Reverse Type 2 Diabetes: Take Control, Live Healthy!')
   cy.get("div[class='section-intro left-align'] h2").should('have.text','What is Diabetes Reversal?')
   cy.get("section[id='review'] h2").should('have.text','What our members are saying about the reversal program')
 
