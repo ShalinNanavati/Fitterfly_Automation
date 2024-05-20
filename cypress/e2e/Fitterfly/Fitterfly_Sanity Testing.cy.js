@@ -429,6 +429,53 @@ it('Verify Get a Call Back Option in Sidebar', () => {
 })
 
  
+// Fittereats Pages
+
+it('Verify FitterEats Home Page',()=>{
+
+  cy.visit("https://www.fitterfly.com/food-database")
+  cy.xpath("//h2[normalize-space()='Nutrition API & Data Licensing']").should('have.text','Nutrition API & Data Licensing')
+  cy.xpath("//h2[normalize-space()='Kitchen Studio']").should('have.text','Kitchen Studio')
+  cy.xpath("//h3[normalize-space()='Trusted Nutrition Partner of these Major Brands']").should('have.text','Trusted Nutrition Partner of these Major Brands')
+  cy.xpath("//span[normalize-space()='View Data Sample']").should('be.visible')
+  cy.xpath("//div[@class='studio-button-block']//div//span[contains(text(),'Partner with us')]").should('be.visible')
+  cy.xpath("//span[normalize-space()='View Details']").should('be.visible')
+
+
+  })
+
+   
+  it('Verify FitterEats - Kitchen Studio Page',()=>{
+   cy.visit("https://www.fitterfly.com/food-visual-solutions")
+   cy.xpath("//h1[normalize-space()='Kitchen Studio']").should('have.text','Kitchen Studio')
+   cy.xpath("//div[contains(text(),'Studio Events')]").should('have.text','Studio Events')
+   cy.xpath("//div[contains(text(),'Videographers')]").should('have.text','Videographers')
+   cy.xpath("//div[@class='equipped-studios-head'][normalize-space()='Kitchen Equipments']").should('have.text','Kitchen Equipments')
+   cy.xpath("//div[normalize-space()='Videography & photography Equipments']").should('have.text','Videography & photography Equipments')
+
+
+  })
+ 
+  it('Verify FitterEats - Nutrition-database Page',()=>{
+  cy.visit("https://www.fitterfly.com/nutrition-database")
+  cy.xpath("//h4[@class='food-info-card-info-head'][normalize-space()='Ingredients']").should('have.text','Ingredients')
+  cy.xpath("//h4[normalize-space()='Cooked Food']").should('have.text','Cooked Food')
+  cy.xpath("//h4[normalize-space()='Packed Food']").should('have.text','Packed Food')
+  cy.xpath("//div[@class='data-image-name'][normalize-space()='Raw Egg']").should('have.text','Raw Egg')
+
+  cy.xpath("//div[@class='food-info-cards main-tab-links active']//div[@class='food-info-card-img']").click()
+  cy.wait(1000)
+  cy.xpath("//h4[normalize-space()='Cooked Food']").should('have.text','Cooked Food')
+  cy.xpath("//h4[normalize-space()='Tomato Basil Soup']").should('have.text','Tomato Basil Soup')
+
+  cy.xpath("//div[@class='food-carsouel-info flex-center main-tab']//div[1]//div[1]//div[1]").click()
+  cy.wait(1000)
+  cy.xpath("//h4[normalize-space()='Packed Food']").should('have.text','Packed Food')
+  cy.xpath("//h4[contains(text(),'Pickwick Creamy Wafer Biscuits Strawberry Flavoure')]").should('have.text','Pickwick Creamy Wafer Biscuits Strawberry Flavoured')
+
+
+
+  })
 
 
 
