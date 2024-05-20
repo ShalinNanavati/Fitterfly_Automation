@@ -58,7 +58,6 @@ describe('Fitterfly Diabetes Reversal Test', () => {
   
    
 //////////////////////////////////////////////////////////////////////////////////////////////////
-
 it('Verify Diabetes Reversal Test', () => {
   
   cy.visit("https://www.fitterfly.com/reversal-calculator")
@@ -82,19 +81,24 @@ it('Verify Diabetes Reversal Test', () => {
   cy.get("input[placeholder='Years']").type(35)  //Age
   cy.get("#input").type("70")  //Weight
   cy.get("input[placeholder='cm']").type(170) //Height
+
+  cy.xpath("//select[@ng-model='person.diabetes_medicine']").select(2) //No.of Medicine dropdown
+  cy.xpath("//select[@ng-model='person.diabetes_duration']").select(3) //Duration of diabetes
+
+
   cy.xpath("//label[normalize-space()='Male']").click()  // Gender select
+  cy.xpath("//body[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[9]/div[1]/div[1]/div[1]/label[2]/span[1]").click({force: true}) // Insulin
   cy.get("input[placeholder='e.g. 5.1, 6, 7.3']").type(6)  //HBA1C 
-  cy.get("select[ng-model='person.diabetes_duration']").select(3) //Duration of diabetes
-  cy.xpath("//select[@class='select tabbable-select ng-pristine ng-untouched ng-valid ng-empty']").select(2) //No.of Medicine dropdown
-  cy.xpath("(//span[contains(@class,'checkmark')])[3]").click({force: true}) // Family History
-  cy.xpath("(//span[contains(@class,'checkmark')])[5]").click({force: true}) // Insulin
-  cy.get("body > div:nth-child(3) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(10) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > label:nth-child(2)").click({force: true}) // Doctor visit
-  cy.xpath("//div[contains(@ng-show,'showHealthProfileForm')]//div[contains(@class,'button md-button')]").click({force: true}) // Proceed button
+  cy.xpath("//body[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[1]/div[8]/div[1]/div[1]/div[1]/label[1]/span[1]").click({force: true}) // Family History
+  
+  
+   //cy.get("body > div:nth-child(3) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(10) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > label:nth-child(2)").click({force: true}) // Doctor visit
+  cy.xpath("//div[@class='form-content']//span[contains(text(),'Proceed')]").click() // Proceed button
 
    
-  cy.xpath("(//span[contains(@class,'checkmark-box')])[6]").click() // Other medical conditon option
-  cy.xpath("(//span[contains(@class,'checkmark-box')])[13]").click() // Which of the following applies to you?
-  cy.xpath("(//div[contains(@class,'button md-button')])[2]").click() // Proceed button
+  cy.xpath("//label[contains(@ng-click,'unCheckConditions()')]//span[contains(@class,'checkmark-box')]").click()  // Other medical conditions?*
+  cy.xpath("//label[contains(@ng-click,'unCheckOtherConditions()')]//span[contains(@class,'checkmark-box')]").click() // Which of the following applies to you?*
+  cy.xpath("//div[contains(@ng-show,'showOtherMedicalConditionsForm')]//span[contains(text(),'Proceed')]").click() // Proceed button
 
 
   // You are almost done page
@@ -111,9 +115,9 @@ it('Verify Diabetes Reversal Test', () => {
 
 
 })
-  
 
 })
+  
 
   
   
