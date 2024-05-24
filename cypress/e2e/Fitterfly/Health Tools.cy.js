@@ -107,6 +107,7 @@ it('Verify Diabetes Reversal Test', () => {
   cy.xpath("(//span)[37]").click() //Do you get quality 7-8 hours sleep everyday
   cy.xpath("(//span)[40]").click() // Are you physically active?
   cy.xpath("(//div[contains(@class,'button md-button')])[3]").click() //Proceed button
+  cy.wait(3000)
 
  
   //Your score page
