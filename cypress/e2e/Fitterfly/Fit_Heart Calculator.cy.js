@@ -71,8 +71,8 @@ describe('Fitterfly Fit-Heart Calculator', () => {
       cy.xpath("//strong[normalize-space()='35']").should('contain',35) // CV score
       cy.xpath("//div[@class='calcul-tag risk']").should('contain','High risk') // High Risk
       cy.xpath("//h2[normalize-space()='Thank You for Your Response!']").should('contain','Thank You for Your Response!')
-      cy.xpath("//body[1]/div[3]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/strong[1]").should('contain','79 years')
-      cy.xpath("//body[1]/div[3]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/strong[1]").should('contain','>56%')
+      cy.xpath("(//strong[@class='report-score'])[1]").should('contain','79 years')
+      cy.xpath("(//strong[@class='report-score'])[2]").should('contain','>56%')
       cy.xpath("(//div[@class='report-title'])[1]").should('contain','Your heart age is')
       cy.xpath("(//div[@class='report-title'])[2]").should('contain','Your risk for heart disease is')
       cy.xpath("//strong[normalize-space()='Insights']").should('contain','Insights')
@@ -152,8 +152,8 @@ describe('Fitterfly Fit-Heart Calculator', () => {
    cy.xpath("//strong[normalize-space()='74']").should('contain',74) // CV score
    cy.xpath("//div[@class='calcul-tag warning']").should('contain','Moderate risk') // Moderate Risk
    cy.xpath("//h2[normalize-space()='Thank You for Your Response!']").should('contain','Thank You for Your Response!')
-   cy.xpath("//body[1]/div[3]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/strong[1]").should('contain','22 years')
-   cy.xpath("//body[1]/div[3]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/strong[1]").should('contain','4%')
+   cy.xpath("(//strong[@class='report-score'])[1]").should('contain','22 years')
+   cy.xpath("(//strong[@class='report-score'])[2]").should('contain','4%')
    cy.xpath("(//div[@class='report-title'])[1]").should('contain','Your heart age is')
    cy.xpath("(//div[@class='report-title'])[2]").should('contain','Your risk for heart disease is')
    cy.xpath("//strong[normalize-space()='Insights']").should('contain','Insights')
@@ -236,8 +236,8 @@ it('FitHeart Calculator Test Case-3',()=> {
    cy.xpath("//div[@class='total-calcul-score warning']//strong[contains(text(),'55')]").should('contain',55) // CV score
    cy.xpath("//div[@class='calcul-tag warning']").should('contain','Moderate risk') // Moderate Risk
    cy.xpath("//h2[normalize-space()='Thank You for Your Response!']").should('contain','Thank You for Your Response!')
-   cy.xpath("//body[1]/div[3]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/strong[1]").should('contain','82 years')
-   cy.xpath("//body[1]/div[3]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/strong[1]").should('contain','15%')
+   cy.xpath("(//strong[@class='report-score'])[1]").should('contain','82 years')
+   cy.xpath("(//strong[@class='report-score'])[2]").should('contain','15%')
    cy.xpath("(//div[@class='report-title'])[1]").should('contain','Your heart age is')
    cy.xpath("(//div[@class='report-title'])[2]").should('contain','Your risk for heart disease is')
    cy.xpath("//strong[normalize-space()='Insights']").should('contain','Insights')
@@ -318,8 +318,8 @@ it('FitHeart Calculator Test Case-4',()=> {
    cy.xpath("//strong[normalize-space()='84']").should('contain',84) // CV score
    cy.xpath("//div[@class='calcul-tag normal']").should('contain','Low risk') // Low Risk
    cy.xpath("//h2[normalize-space()='Thank You for Your Response!']").should('contain','Thank You for Your Response!')
-   cy.xpath("//body[1]/div[3]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/strong[1]").should('contain','26 years')
-   cy.xpath("//body[1]/div[3]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/strong[1]").should('contain','2%')
+   cy.xpath("(//strong[@class='report-score'])[1]").should('contain','26 years')
+   cy.xpath("(//strong[@class='report-score'])[2]").should('contain','2%')
    cy.xpath("(//div[@class='report-title'])[1]").should('contain','Your heart age is')
    cy.xpath("(//div[@class='report-title'])[2]").should('contain','Your risk for heart disease is')
    cy.xpath("//strong[normalize-space()='Insights']").should('contain','Insights')
@@ -400,8 +400,8 @@ it('FitHeart Calculator Test Case-5',()=> {
    cy.xpath("//strong[normalize-space()='45']").should('contain',45) // CV score
    cy.xpath("//div[@class='calcul-tag risk']").should('contain','High risk') // High Risk
    cy.xpath("//h2[normalize-space()='Thank You for Your Response!']").should('contain','Thank You for Your Response!')
-   cy.xpath("//body[1]/div[3]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/strong[1]").should('contain','57 years')
-   cy.xpath("//body[1]/div[3]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/strong[1]").should('contain','15%')
+   cy.xpath("(//strong[@class='report-score'])[1]").should('contain','57 years')
+   cy.xpath("(//strong[@class='report-score'])[2]").should('contain','15%')
    cy.xpath("(//div[@class='report-title'])[1]").should('contain','Your heart age is')
    cy.xpath("(//div[@class='report-title'])[2]").should('contain','Your risk for heart disease is')
    cy.xpath("//strong[normalize-space()='Insights']").should('contain','Insights')
@@ -484,8 +484,8 @@ it('FitHeart Calculator Test Case-6',()=> {
    cy.xpath("//div[@class='total-calcul-score warning']//strong[contains(text(),'55')]").should('contain',55) // CV score
    cy.xpath("//div[@class='calcul-tag warning']").should('contain','Moderate risk') // Moderate Risk
    cy.xpath("//h2[normalize-space()='Thank You for Your Response!']").should('contain','Thank You for Your Response!')
-   cy.xpath("//body[1]/div[3]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/strong[1]").should('contain','71 years')
-   cy.xpath("//body[1]/div[3]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/strong[1]").should('contain','33%')
+   cy.xpath("(//strong[@class='report-score'])[1]").should('contain','71 years')
+   cy.xpath("(//strong[@class='report-score'])[2]").should('contain','33%')
    cy.xpath("(//div[@class='report-title'])[1]").should('contain','Your heart age is')
    cy.xpath("(//div[@class='report-title'])[2]").should('contain','Your risk for heart disease is')
    cy.xpath("//strong[normalize-space()='Insights']").should('contain','Insights')
